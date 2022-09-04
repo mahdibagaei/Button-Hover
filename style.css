@@ -1,0 +1,52 @@
+*, html {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background: rgba(0,0,0,0.2);
+}
+
+a {
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+}
+.page_bottom{
+    position: fixed;
+    left: 50%;
+    bottom: 10px;
+    transform: translateX(-50%);
+}
+
+.main {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.inner {
+    background-color: dodgerblue;
+    padding: 10px 19px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.inner-data {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background-color: red;
+    height: 100%;
+    display: grid;
+    place-content: center;
+    transition: .5s;
+    transform: translateX(-100%);
+}
+
+.inner:hover .inner-data {
+    transform: translateX(0);
+}
